@@ -2,29 +2,33 @@
 
 
 .tophead { 
+    width:100%;
+    length:20%;
     float: left;
     display: block;
     color: black;
-    text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
+    background-color:white;
 }
 
 .tophead .img {
-    float: left;
-  display: block;
-  color: black;
-  text-align: center;
+  display:block;
   padding: 14px 16px;
-  text-decoration: none;
   font-size: 17px;
+  position:fixed;
+  left:10%
 }
 
 .tophead .searchbox {
     float: right;
-    text-align:right;
-    display: block;
+    display: flex;
+    position:fixed;
+    top:15%;
+    right:10%;
+    justify-content: center;
+    ;
+    
   }
   
   .tophead input[type=text] {
@@ -32,6 +36,7 @@
     margin-top: 8px;
     font-size: 17px;
     border: none;
+    background-color: rgb(168, 168, 168);
   }
   
   .tophead .searchbox button {
@@ -49,8 +54,9 @@
     background: #ccc;
   }
 
-  .bar {
-    width: 300px;
-  padding: 50px;
-  margin: 20px;
-  }
+  .fooot {
+  position: fixed;
+  bottom: 0;
+  left: 0;}
+
+  
