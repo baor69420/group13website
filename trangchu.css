@@ -6,36 +6,46 @@
   display: flex;
 }
 
-.search {
-  width: 100%;
+.search-box{
+  width: 300px;
   position: relative;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-
-.search-term {
-  display: flex;
-  width: 30%;
-  border: 3px solid #224c8d;
-  padding: 5px;
-  height: 28px;
-  border-radius: 18px 0px 0px 18px;
-  outline: none;
-  background: white;
+  display: inline-block;
+  font-size: 14px;
   font-family: 'Open Sans';
 }
-
-.search-button {
-  width: 4.5%;
-  height: 44px;
-  border: 3px solid #224c8d;
-  background: #224c8d;
-  text-align: justify;
-  color: white;
-  border-radius: 0px 18px 18px 0px;
+.search-box input[type="text"]{
+  height: 32px;
+  padding: 5px 10px;
+  border: 1px solid #CCCCCC;
+  font-size: 14px;
+  font-family: 'Open Sans';
+}
+.result{
+  position: absolute;        
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  color: #f2f2f2;
+  background-color: #6DB5E7;
+  font-family: 'Open Sans';
+}
+.search-box input[type="text"], .result{
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+/* Formatting result items */
+.result p{
+  margin: 0;
+  padding: 7px 10px;
+  border: 1px solid #00000000;
+  border-top: none;
   cursor: pointer;
-  font-size: 22px;
+  background-color: #00000000;
+  font-family: 'Open Sans';
+}
+.result p:hover{
+  background: #f2f2f2;
 }
 
 i {
@@ -73,7 +83,7 @@ i {
 
 .rectangle {
   width: 100%;
-  height: 400px;
+  height: 800px;
   top:0;
   background: #6DB5E7;
 }

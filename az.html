@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="trangchu.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Không có kết quả</title>
-  <link rel="icon" type="image/x-icon" href="iconnobg.png">
+  <title>Trang chủ</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.search-box input[type="text"]').on("keyup input", function(){
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result");
+                if(inputVal.length){
+                    $.get("backend-search.php", {term: inputVal}).done(function(data){
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else{
+                    resultDropdown.empty();
+                }
+            });
+            
+            // Set search input value on click of result item
+            $(document).on("click", ".result p", function(){
+                $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+                $(this).parent(".result").empty();
+            });
+        });
+    </script>
 </head>
 
 <body>
     <!-- 1. Logo và thanh tìm kiếm -->
     <div class="tophead">
         <!-- Logo -->
-        <a href="trangchu.html">
+        <a href="#trangchu">
             <img src="logonobg.png" alt="13 Logo" style="width:180px; height:auto; margin-top:7px; margin-left: 10px; display: flex;">
         </a>
         <!-- Thanh tìm kiếm -->
-        <div class="search">
-            <input
-                  type="input"
-                  class="search-term"
-                  autocomplete="off"
-                  placeholder="Thuật ngữ"
-              />
-              <button type="submit" class="search-button">
-                <i class="fa fa-search"></i>
-              </button>
+        <div class="search-box">
+            <input type="text" autocomplete="off" placeholder="Tìm từ..." />
+            <div class="result"></div>
         </div>
 
         <div> <!-- dùng để căn giữa thanh tìm kiếm -->
@@ -38,15 +56,13 @@
     </div>
     <!-- 2. Thanh menu -->
     <div class="menu-bar">
-        <a href="trangchu.html">Trang chủ</a>
-        <a class="active" href="az.html">A-Z</a>
+        <a class="active" href="trangchu.html">Trang chủ</a>
+        <a href="az.html">A-Z</a>
         <a href="about.html">Về chúng tôi</a>
     </div>
 
     <!-- 3. Ảnh nền trang chủ -->
-    <div class="rectangle">
-        <p></p>
-    </div>
+    <div class="rectangle"></div>
 
     <!-- CHÂN TRANG -->
     <footer>
