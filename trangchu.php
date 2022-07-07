@@ -57,7 +57,6 @@
     <!-- 2. Thanh menu -->
     <div class="menu-bar">
         <a class="active" href="trangchu.html">Trang chủ</a>
-        <a href="az.html">A-Z</a>
         <a href="about.html">Về chúng tôi</a>
     </div>
 

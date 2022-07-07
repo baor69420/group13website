@@ -8,7 +8,7 @@
   
   .search {
     width: 100%;
-    position: relative;
+    position: fixed;
     display: flex;
     align-self: center;
     justify-content: center;

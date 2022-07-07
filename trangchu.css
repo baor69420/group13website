@@ -7,17 +7,23 @@
 }
 
 .search-box{
-  width: 300px;
+  width: 400px;
   position: relative;
-  display: inline-block;
+  margin: 0 auto;
+  display: block;
   font-size: 14px;
+  align-self: center;
   font-family: 'Open Sans';
 }
 .search-box input[type="text"]{
-  height: 32px;
-  padding: 5px 10px;
-  border: 1px solid #CCCCCC;
-  font-size: 14px;
+  display: flex;
+  width: 30%;
+  border: 3px solid #224c8d;
+  padding: 5px;
+  height: 50px;
+  border-radius: 18px 18px 18px 18px;
+  outline: none;
+  background: white;
   font-family: 'Open Sans';
 }
 .result{
@@ -33,6 +39,7 @@
   width: 100%;
   box-sizing: border-box;
   font-family: 'Open Sans';
+  font-size: 16px;
 }
 /* Formatting result items */
 .result p{
