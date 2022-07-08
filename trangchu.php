@@ -58,7 +58,7 @@
         <h1>SCIDICT - KHOA HỌC KHÔNG KHÓ</h1>
         <p>Hàng ngàn học sinh tin tưởng chúng tôi với các thuật ngữ khoa học. Còn bạn thì sao?</p>
         <div class="search-box">
-            <input type="text" autocomplete="off" placeholder="Tìm từ..." />
+            <input type="text" autocomplete="off" placeholder="Nhập từ khóa để bắt đầu tìm kiếm" />
             <div class="result"></div>
         </div>
     </div>
