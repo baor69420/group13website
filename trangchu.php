@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="trangchu.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Trang chủ</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -41,18 +42,10 @@
     <!-- 1. Logo và thanh tìm kiếm -->
     <div class="tophead">
         <!-- Logo -->
-        <a href="#trangchu">
-            <img src="logonobg.png" alt="13 Logo" style="width:180px; height:auto; margin-top:7px; margin-left: 10px; display: flex;">
+        <a href="trangchu.php">
+            <img src="logonobg.png" alt="13 Logo" style="width:160px; height:auto; margin-top:7px; margin-left: 10px; display: flex;">
         </a>
         <!-- Thanh tìm kiếm -->
-        <div class="search-box">
-            <input type="text" autocomplete="off" placeholder="Tìm từ..." />
-            <div class="result"></div>
-        </div>
-
-        <div> <!-- dùng để căn giữa thanh tìm kiếm -->
-            <img src="logonobg.png" alt="13 Logo" style="width:150px; height:auto; margin-top:7px; margin-right: 10px; visibility: hidden;">
-        </div>
     </div>
     <!-- 2. Thanh menu -->
     <div class="menu-bar">
@@ -61,12 +54,21 @@
     </div>
 
     <!-- 3. Ảnh nền trang chủ -->
-    <div class="rectangle"></div>
+    <div class="rectangle">
+        <h1>SCIDICT - KHOA HỌC KHÔNG KHÓ</h1>
+        <p>Hàng ngàn học sinh tin tưởng chúng tôi với các thuật ngữ khoa học. Còn bạn thì sao?</p>
+        <div class="search-box">
+            <input type="text" autocomplete="off" placeholder="Tìm từ..." />
+            <div class="result"></div>
+        </div>
+    </div>
+        
+    
 
     <!-- CHÂN TRANG -->
     <footer>
         <!-- 1. Logo -->
-        <a href="trangchu.html"><img src="logonobg.png" alt="13 Logo" style="width: 160px"></a>
+        <a href="trangchu.php"><img src="logonobg.png" alt="13 Logo" style="width: 160px"></a>
         
         <!-- 2. Icon -->
         <div class="hover-icon">
